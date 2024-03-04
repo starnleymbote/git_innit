@@ -39,29 +39,23 @@ class GenerateText():
         This method is responsible for commiting and pushing the generated SQLs
         """
 
-        branch = "dev"
+        branch = "main"
         #Git pull any changes so far
-        git_pull = f"git pull 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:@github.com origin {branch}"
+        git_pull = f"git pull origin {branch}"
 
-        print(f"Git commint command {git_pull}")
 
         os.system(git_pull)
 
         git_add = f"git add ."
 
-        print(f"The git add command {git_add}")
         
         os.system(git_add)
 
         git_commit = f"git commit -m {message}"
 
-        print(f"Git commit command {git_commit}")
-
         os.system(git_commit)
 
-        git_push = f"git push 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:@github.com origin {branch}"
-
-        print(f"Git push command {git_push}")
+        git_push = f"git push"
         
         os.system(git_push)
 
@@ -74,7 +68,9 @@ class GenerateText():
         self.generate_text_file(text)
         print("File has been created ")
 
-        # self.commit_and_push("Commit the generated texts")
+        message = "\'generated texts\'"
+
+        self.commit_and_push(message)
 
     def __call__(self):
         """
