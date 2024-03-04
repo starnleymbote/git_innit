@@ -41,21 +41,27 @@ class GenerateText():
 
         branch = "main"
         #Git pull any changes so far
-        git_pull = f"git pull origin {branch}"
+        git_pull = f"git pull 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:@github.com origin {branch}"
 
+        print(f"Git commint command {git_pull}")
 
         os.system(git_pull)
 
         git_add = f"git add ."
 
+        print(f"The git add command {git_add}")
         
         os.system(git_add)
 
         git_commit = f"git commit -m {message}"
 
+        print(f"Git commit command {git_commit}")
+
         os.system(git_commit)
 
-        git_push = f"git push"
+        git_push = f"git push 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:@github.com origin {branch}"
+
+        print(f"Git push command {git_push}")
         
         os.system(git_push)
 
