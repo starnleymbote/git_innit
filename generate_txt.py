@@ -67,6 +67,13 @@ class GenerateText():
 
         print("Done!!!")
 
+    def get_query(self, queries):
+        """
+            getting the queries
+        """
+
+
+
     def main(self):
 
         print("About to write to our file")
@@ -76,6 +83,10 @@ class GenerateText():
 
         message = "\'generated texts\'"
 
+        queries = ['Select * FROM table where name = ''', 'Describe table all']
+        
+        self.get_query(queries)
+        
         self.commit_and_push(message)
 
     def __call__(self):
