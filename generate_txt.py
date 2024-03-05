@@ -39,7 +39,7 @@ class GenerateText():
         This method is responsible for commiting and pushing the generated SQLs
         """
 
-        branch = "main"
+        branch = "dev"
         #Git pull any changes so far
         git_pull = f"git pull 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:@github.com origin {branch}"
 
@@ -59,7 +59,7 @@ class GenerateText():
 
         os.system(git_commit)
 
-        git_push = f"git push origin {branch}"
+        git_push = f"git push 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:@github.com origin {branch}"
 
         print(f"Git push command {git_push}")
         
