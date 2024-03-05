@@ -59,7 +59,7 @@ class GenerateText():
 
         os.system(git_commit)
 
-        git_push = f"git push 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:@github.com origin {branch}"
+        git_push = f"git push "
 
         print(f"Git push command {git_push}")
         
